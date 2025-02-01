@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  --black: rgb(44, 44, 44);
+  --white: whitesmoke;
+  font-family: "Roboto";
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Roboto";
+}
+
+.header {
+  color: var(--white);
+  width: 100%;
+  height: 5vh;
+  margin-bottom: 1em;
+  cursor: default;
+  letter-spacing: 1.5px;
+}
+.header h1 span {
+  position: relative;
+}
+.header h1 { 
+  transition: all .3 ease;
+  
+}
+
+/* .header h1 span::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--white);
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  transition: all 0.25s ease;
+  transform: scale(0);
+}
+
+.header h1:hover #border::after {
+  transform: scale(1);
+} */
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2em;
+}
+.mainContainer .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.mainContainer .data {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 1.3em;
+  width: 80%;
+}
+.mainContainer .tranverse {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  gap: 1.3em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input {
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 7px;
+  font-size: 0.89em;
+  padding: 0.7em;
+  letter-spacing: 1.3px;
+  border: 1.3px solid var(--white);
+  transition: all 0.3s ease;
+}
+
+.input:hover,
+.input:focus {
+  outline: none;
+  background-color: var(--white);
+  color: var(--black);
+  border: 1.3px solid var(--black);
+}
+
+.button {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1em;
+  border-radius: 5px;
+  border: 1.3px solid var(--white);
+  letter-spacing: 1.4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1.3px solid var(--black);
+}
+
+.button:active {
+  box-shadow: inset 0px 0px 4px black;
+  transition: background-color 0.1s ease;
+}
+
+.treeContainer {
+  color: var(--white);
+}
+
+.outputContainerWrapper {
+  display: block;
+  height: 140px;
+}
+
+.outputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  font-weight: bold;
+  animation: surge 0.3s ease;
+}
+.outputContainer .outputList {
+  display: flex;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.outputContainer .outputItem {
+  list-style: none;
+  letter-spacing: 1.5px;
+}
+
+.treeContainer {
+  display: block;
+  width: 95%;
+  height: 55vh;
+  margin: 3vh auto 0;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  border: 1px solid var(--white);
+  border-radius: 7px;
+  animation: surge 0.3s ease;
+}
+
+.treeContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.binaryTreeList {
+  padding: 0;
+  width: 100%;
+  position: relative;
+  margin: 0 0 0 0;
+}
+
+.node {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 25%;
+}
+.node span {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  background-color: var(--white);
+  color: var(--black);
+  border: 2px solid var(--white);
+  width: auto;
+  font-size: 100%;
+  transition: all 0.2s ease;
+  border-radius: 20%;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 10px;
+  animation: surge 0.3s ease;
+}
+.node span:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+.node ul {
+  padding: 2%;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+.surge {
+  animation: surge 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-enter-actvive,
+.fade-leave-active {
+  transition: all 0.2s ease;
+  position:absolute;
+}
+
+#resetButton{
+  background-color: crimson;
+}
+
+#resetButton:hover{
+  background-color: white;
+  color: crimson;
+}
+
+@keyframes surge {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(1);
+    opacity: 1;
+  }
+} /*# sourceMappingURL=style.css.map */
