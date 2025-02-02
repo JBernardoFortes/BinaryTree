@@ -3,7 +3,7 @@
 
 Project to solve some questions related to the discipline of Data Structure about BST
 
-<italic>It's is in brazilian portuguese</italic>
+<i>It's is in brazilian portuguese</i>
 
 [Page](https://jbernardofortes.github.io/BinaryTree/)
 
