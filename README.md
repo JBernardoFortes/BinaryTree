@@ -1,7 +1,9 @@
-# Arvore Binaria de Busca
+# Binary Search Tree
 
 Projeto para solucionar questões referentes a uma atividade da disciplina de Estrutura de Dados sobre arvores binarias de busca
 
-[Site da Arvore Binaria](https://jbernardofortes.github.io/BinaryTree/)
+Project to solve some questions related to the discipline of Data Structure about BST
+
+[Page](https://jbernardofortes.github.io/BinaryTree/)
 
 <img src='https://imgur.com/hiAFUw8.jpg'></img>
